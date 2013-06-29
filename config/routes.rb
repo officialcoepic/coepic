@@ -1,4 +1,55 @@
 Coepic::Application.routes.draw do
+  resources :books
+
+
+  resources :authors
+
+
+  resources :groups
+
+
+  resources :chapters
+
+
+  resources :drafts
+
+
+  resources :reviews
+
+
+  resources :pdf_downloads
+
+
+  resources :payments
+
+
+  resources :formats
+
+
+  resources :social_links
+
+
+  resources :genres
+
+
+  resources :author_images
+
+
+  resources :faqs
+
+
+  resources :instructions
+
+
+  resources :book_cover_images
+
+
+  resources :printers
+
+
+  resources :addresses
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

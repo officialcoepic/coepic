@@ -1,0 +1,23 @@
+<h1>Listing pdf_downloads</h1>
+
+<table>
+  <tr>
+    <th>Noofclick</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pdf_downloads.each do |pdf_download| %>
+  <tr>
+    <td><%= pdf_download.noofclick %></td>
+    <td><%= link_to 'Show', pdf_download %></td>
+    <td><%= link_to 'Edit', edit_pdf_download_path(pdf_download) %></td>
+    <td><%= link_to 'Destroy', pdf_download, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pdf download', new_pdf_download_path %>

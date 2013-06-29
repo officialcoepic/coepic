@@ -1,0 +1,23 @@
+<h1>Listing author_images</h1>
+
+<table>
+  <tr>
+    <th>Imageurl</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @author_images.each do |author_image| %>
+  <tr>
+    <td><%= author_image.imageurl %></td>
+    <td><%= link_to 'Show', author_image %></td>
+    <td><%= link_to 'Edit', edit_author_image_path(author_image) %></td>
+    <td><%= link_to 'Destroy', author_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Author image', new_author_image_path %>

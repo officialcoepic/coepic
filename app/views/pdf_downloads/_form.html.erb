@@ -1,0 +1,21 @@
+<%= form_for(@pdf_download) do |f| %>
+  <% if @pdf_download.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pdf_download.errors.count, "error") %> prohibited this pdf_download from being saved:</h2>
+
+      <ul>
+      <% @pdf_download.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :noofclick %><br />
+    <%= f.number_field :noofclick %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

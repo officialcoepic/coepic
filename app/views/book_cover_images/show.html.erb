@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Bookurl:</b>
+  <%= @book_cover_image.bookurl %>
+</p>
+
+
+<%= link_to 'Edit', edit_book_cover_image_path(@book_cover_image) %> |
+<%= link_to 'Back', book_cover_images_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pdf: MyString
+  kindle: MyString
+  epub: MyString
+
+two:
+  pdf: MyString
+  kindle: MyString
+  epub: MyString

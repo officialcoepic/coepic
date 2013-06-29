@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  content: MyText
+  timeofthedraft: 2013-06-29 02:43:22
+  ithupload: 1
+
+two:
+  content: MyText
+  timeofthedraft: 2013-06-29 02:43:22
+  ithupload: 1

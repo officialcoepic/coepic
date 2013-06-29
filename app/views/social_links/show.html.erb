@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Facebook:</b>
+  <%= @social_link.facebook %>
+</p>
+
+<p>
+  <b>Twitter:</b>
+  <%= @social_link.twitter %>
+</p>
+
+<p>
+  <b>Wordpress:</b>
+  <%= @social_link.wordpress %>
+</p>
+
+<p>
+  <b>Other:</b>
+  <%= @social_link.other %>
+</p>
+
+
+<%= link_to 'Edit', edit_social_link_path(@social_link) %> |
+<%= link_to 'Back', social_links_path %>

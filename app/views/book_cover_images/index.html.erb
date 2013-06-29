@@ -1,0 +1,23 @@
+<h1>Listing book_cover_images</h1>
+
+<table>
+  <tr>
+    <th>Bookurl</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @book_cover_images.each do |book_cover_image| %>
+  <tr>
+    <td><%= book_cover_image.bookurl %></td>
+    <td><%= link_to 'Show', book_cover_image %></td>
+    <td><%= link_to 'Edit', edit_book_cover_image_path(book_cover_image) %></td>
+    <td><%= link_to 'Destroy', book_cover_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Book cover image', new_book_cover_image_path %>

@@ -1,0 +1,2 @@
+module AuthorImagesHelper
+end
