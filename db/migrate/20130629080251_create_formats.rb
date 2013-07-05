@@ -4,7 +4,7 @@ class CreateFormats < ActiveRecord::Migration
       t.string :pdf
       t.string :kindle
       t.string :epub
-
+      t.references :book
       t.timestamps
     end
   end

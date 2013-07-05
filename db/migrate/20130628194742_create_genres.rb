@@ -4,6 +4,7 @@ class CreateGenres < ActiveRecord::Migration
       t.string :name
       t.integer :nooftag
 
+      t.references :book
       t.timestamps
     end
   end

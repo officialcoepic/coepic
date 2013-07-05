@@ -4,6 +4,7 @@ class CreateReviews < ActiveRecord::Migration
       t.text :content
       t.timestamp :timeofthereview
 
+      t.references :book
       t.timestamps
     end
   end

@@ -4,7 +4,7 @@ class CreatePayments < ActiveRecord::Migration
       t.string :bitcoin
       t.string :paypal
       t.string :account
-
+      t.references :author
       t.timestamps
     end
   end

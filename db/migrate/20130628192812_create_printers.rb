@@ -3,6 +3,7 @@ class CreatePrinters < ActiveRecord::Migration
     create_table :printers do |t|
       t.string :name
 
+      t.references :book
       t.timestamps
     end
   end

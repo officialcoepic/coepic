@@ -5,6 +5,7 @@ class CreateDrafts < ActiveRecord::Migration
       t.timestamp :timeofthedraft
       t.integer :ithupload
 
+      t.references :book
       t.timestamps
     end
   end

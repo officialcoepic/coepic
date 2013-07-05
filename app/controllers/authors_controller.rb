@@ -25,11 +25,12 @@ class AuthorsController < ApplicationController
   # GET /authors/new.json
   def new
     @author = Author.new
+    @author.build_address
+  #  respond_to do |format|
+   #   format.html # new.html.erb
+    #  format.json { render json: @author }
+   # end
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @author }
-    end
   end
 
   # GET /authors/1/edit

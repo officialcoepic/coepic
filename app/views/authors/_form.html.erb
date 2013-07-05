@@ -1,41 +1,75 @@
-<%= form_for(@author) do |f| %>
-  <% if @author.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@author.errors.count, "error") %> prohibited this author from being saved:</h2>
-
-      <ul>
-      <% @author.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for @author, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'text_field' %>
     </div>
-  <% end %>
+  </div>
+  <div class="control-group">
+    <%= f.label :penname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :penname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'text_field' %>
+    </div>
+  </div>
+  <%= f.fields_for :address do |address_form| -%>
+  <div class="control-group">
+<%= address_form.label :line1, "Address Line 1" , :class => 'control-label'%>
+    <div class="controls">
+    <%= address_form.text_field :line1, :class => 'text_field' %>
+   </div>
+  </div>
+  <div class="control-group">
+   <%= address_form.label :line2,  "Address Line 2", :class => 'control-label'%>
+    <div class="controls">
+    <%= address_form.text_field :line2, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= address_form.label :city,"City", :class => 'control-label'%>
+    <div class="controls">
+    <%= address_form.text_field :city, :class => 'text_field' %>
+     </div>
+  </div>
+  <div class="control-group">
+   <%= address_form.label :state,"State", :class => 'control-label'%>
+    <div class="controls">
+    <%= address_form.text_field :state, :class => 'text_field' %>
+     </div>
+  </div>
+  <div class="control-group">
+   <%= address_form.label :zip_code, "Zipcode", :class => 'control-label'%>
+    <div class="controls">
+    <%= address_form.text_field :zip_code, :class => 'text_field' %>
+  </div>
+    <% end %>
+  <div class="control-group">
+    <%= f.label :writeup, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :writeup, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :about, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :about, :class => 'text_area' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :goals, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_area :goals, :class => 'text_area' %>
+    </div>
+  </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :penname %><br />
-    <%= f.text_field :penname %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :writeup %><br />
-    <%= f.text_area :writeup %>
-  </div>
-  <div class="field">
-    <%= f.label :about %><br />
-    <%= f.text_area :about %>
-  </div>
-  <div class="field">
-    <%= f.label :goals %><br />
-    <%= f.text_area :goals %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                authors_path, :class => 'btn' %>
   </div>
 <% end %>

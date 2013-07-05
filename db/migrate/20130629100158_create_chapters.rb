@@ -4,6 +4,7 @@ class CreateChapters < ActiveRecord::Migration
       t.string :chapter
       t.text :chaptercontent
 
+      t.references :book
       t.timestamps
     end
   end

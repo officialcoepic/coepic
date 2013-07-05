@@ -5,7 +5,7 @@ class CreateSocialLinks < ActiveRecord::Migration
       t.string :twitter
       t.string :wordpress
       t.string :other
-
+      t.references :author
       t.timestamps
     end
   end
