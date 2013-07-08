@@ -1,4 +1,7 @@
 Coepic::Application.routes.draw do
+  resources :authors
+
+
   resources :books
 
 

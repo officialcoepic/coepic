@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130629102643) do
+ActiveRecord::Schema.define(:version => 20130708182300) do
 
   create_table "addresses", :force => true do |t|
     t.string   "name"
@@ -39,8 +39,6 @@ ActiveRecord::Schema.define(:version => 20130629102643) do
     t.text     "writeup"
     t.text     "about"
     t.text     "goals"
-    t.integer  "group_id"
-    t.integer  "book_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
