@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20130629102643) do
 
   create_table "author_images", :force => true do |t|
     t.string   "imageurl"
+    t.integer  "author_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20130629102643) do
 
   create_table "book_cover_images", :force => true do |t|
     t.string   "bookurl"
+    t.integer  "book_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -130,6 +132,7 @@ ActiveRecord::Schema.define(:version => 20130629102643) do
 
   create_table "printers", :force => true do |t|
     t.string   "name"
+    t.integer  "book_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
