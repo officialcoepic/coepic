@@ -2,9 +2,6 @@ Coepic::Application.routes.draw do
   resources :books
 
 
-  resources :authors
-
-
   resources :groups
 
 
