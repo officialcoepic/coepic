@@ -7,7 +7,7 @@ class CreateAuthors < ActiveRecord::Migration
       t.text :writeup
       t.text :about
       t.text :goals
-
+      t.references :group
       t.timestamps
     end
   end

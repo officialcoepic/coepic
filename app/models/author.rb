@@ -5,6 +5,8 @@ class Author < ActiveRecord::Base
   has_one :book
   has_one :social_link 
   has_one :payment
-
+  has_one :address
+ 
+  accepts_nested_attributes_for :address
   belongs_to :group
 end

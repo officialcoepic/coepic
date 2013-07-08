@@ -1,6 +1,7 @@
 class AuthorsController < ApplicationController
   # GET /authors
   # GET /authors.json
+#  before_filter :authenticate_user!
   def index
     @authors = Author.all
 

@@ -45,4 +45,4 @@ gem "twitter-bootstrap-rails"
 
 
 #LOGIN AUTHENTICATION
-#gem 'devise', '1.4.7'
+gem 'devise', '1.4.7'
