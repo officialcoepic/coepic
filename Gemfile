@@ -43,6 +43,9 @@ gem "twitter-bootstrap-rails"
 
 # gem 'debugger'
 
+#NESTED FORM GENERATOR
+
+gem "nested_form"
 
 #LOGIN AUTHENTICATION
 gem 'devise', '1.4.7'

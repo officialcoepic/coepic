@@ -1,4 +1,4 @@
-<%= form_for @author, :html => { :class => 'form-horizontal' } do |f| %>
+<%= nested_form_for @author, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
     <%= f.label :name, :class => 'control-label' %>
     <div class="controls">
@@ -17,7 +17,8 @@
       <%= f.text_field :email, :class => 'text_field' %>
     </div>
   </div>
-  <%= f.fields_for :address do |address_form| -%>
+<!-- Address Form for -->
+<%= f.fields_for :address do |address_form| -%>
   <div class="control-group">
 <%= address_form.label :line1, "Address Line 1" , :class => 'control-label'%>
     <div class="controls">
@@ -48,7 +49,61 @@
     <%= address_form.text_field :zip_code, :class => 'text_field' %>
   </div>
     <% end %>
+
+<p><%= f.link_to_add "Add a address", :address %></p>
+<!-- End of Address Form for -->
+<!-- Social Link Form for -->  
+<%= f.fields_for :social_link do |soc_form| -%>
   <div class="control-group">
+<%= soc_form.label :facebook, "Facebook" , :class => 'control-label'%>
+    <div class="controls">
+    <%= address_form.text_field :facebook, :class => 'text_field' %>
+   </div>
+  </div>
+  <div class="control-group">
+   <%= soc_form.label :twitter,  "Twitter", :class => 'control-label'%>
+    <div class="controls">
+    <%= soc_form.text_field :twitter, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+   <%= soc_form.label :wordpress,  "Wordpress", :class => 'control-label'%>
+    <div class="controls">
+    <%= soc_form.text_field :wordpress, :class => 'text_field' %>
+    </div>
+</div>
+<div class="control-group">
+   <%= soc_form.label :other,  "Other social presence", :class => 'control-label'%>
+    <div class="controls">
+    <%= soc_form.text_field :other, :class => 'text_field' %>
+    </div>
+</div>
+<% end %>
+<!-- End of Social Link Form for  -->
+<!-- Payment Form for -->  
+<%= f.fields_for :payment_link do |pay_form| -%>
+  <div class="control-group">
+<%= pay_form.label :account, "Account" , :class => 'control-label'%>
+    <div class="controls">
+    <%= pay_form.text_field :account, :class => 'text_field' %>
+   </div>
+  </div>
+  <div class="control-group">
+   <%= pay_form.label :bitcoin,  "Bitcoin link", :class => 'control-label'%>
+    <div class="controls">
+    <%= pay_form.text_field :bitcoin, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+   <%= pay_form.label :paypal,  "Paypal", :class => 'control-label'%>
+    <div class="controls">
+    <%= pay_form.text_field :paypal, :class => 'text_field' %>
+    </div>
+</div>
+<% end %>
+<!-- End of Payment Form for  -->
+
+<div class="control-group">
     <%= f.label :writeup, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_area :writeup, :class => 'text_area' %>
